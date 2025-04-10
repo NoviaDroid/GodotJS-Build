@@ -446,9 +446,9 @@ jobs:
       - name: Build for arm64
         run: |
           cd godot
-          scons ${{ github.event.inputs.additional_scons_args }} dev_build=yes p=macos arch=arm64 
+          scons ${{ github.event.inputs.additional_scons_args }} dev_build=yes p=macos arch=arm64 generate_bundle=yes
           scons ${{ github.event.inputs.additional_scons_args }} target=template_debug p=macos arch=arm64 
-          scons ${{ github.event.inputs.additional_scons_args }} target=template_release separate_debug_symbols=yes debug_symbols=yes p=macos arch=arm64 
+          scons ${{ github.event.inputs.additional_scons_args }} target=template_release separate_debug_symbols=yes debug_symbols=yes p=macos arch=arm64 generate_bundle=yes
   
       - name: Prepare artifact
         run: |
