@@ -53,7 +53,7 @@ jobs:
       - name: Build for arm64
         run: |
           cd godot
-          scons dev_build=yes p=macos arch=arm64
+          scons dev_build=yes p=macos arch=arm64 generate_bundle=yes
   
       - name: Prepare artifact
         run: |
